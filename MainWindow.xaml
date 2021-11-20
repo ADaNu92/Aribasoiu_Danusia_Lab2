@@ -8,7 +8,7 @@
         Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
     <Grid>
         <Label x:Name="___lblTitle" Content="Doughnuts - Bake &amp; Sale" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <GroupBox x:Name="gbRaised" Header="Raised" FontWeight="Bold" Margin="144,87,460,217">
+        <GroupBox x:Name="gbRaised" Header="Raised" FontWeight="Bold" Margin="141,87,463,217">
             <Canvas>
                 <Label x:Name="lblGlazedRaised" Content="Glazed" FontWeight="Normal" Canvas.Left="21" Canvas.Top="18"/>
                 <TextBox x:Name="txtGlazedRaised" Text="0" TextWrapping="Wrap" Width="73" IsReadOnly="True" FontWeight="Normal" Canvas.Left="90" Canvas.Top="22"/>
