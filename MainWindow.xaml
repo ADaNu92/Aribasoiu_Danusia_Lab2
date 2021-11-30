@@ -43,19 +43,29 @@
             </Canvas>
         </GroupBox>
         <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="21" VerticalAlignment="Top" Width="130">
-            <MenuItem Header="File">
-                <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
-            </MenuItem>
-            <MenuItem Header="Doughnuts">
-                <MenuItem Header="Make">
-                    <MenuItem Header="Raised">
-                        <MenuItem x:Name="glazedMenuItem" Header="Glazed" Click="glazedToolStripMenuItem_Click" IsCheckable="True"/>
-                        <MenuItem x:Name="sugarMenuItem" Header="Sugar" IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
-                    </MenuItem>
-                    <MenuItem Header="Filled"/>
-                </MenuItem>
-                <MenuItem Header="Stop"/>
-            </MenuItem>
+			<MenuItem Header="File">
+				<MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
+			</MenuItem>
+			<MenuItem Header="_Doughnuts">
+				<MenuItem Header="Make">
+					<MenuItem Header="Raised">
+						<MenuItem x:Name="glazedToolStripMenuItem" Header="Glazed" IsCheckable="True" Click="glazedToolStripMenuItem_Click"/>
+						<MenuItem x:Name="sugarToolStripMenuItem" Header="Sugar" IsCheckable="True" Click="sugarToolStripMenuItem_Click"/>
+					</MenuItem>
+
+					<MenuItem Header="Filled" Click="FilledItems_Click">
+						<MenuItem x:Name="lemonFilledMenuItem" Header="Lemon" IsCheckable="True"/>
+						<MenuItem x:Name="chocolateFilledMenuItem" Header="Chocolate" IsCheckable="True"/>
+						<MenuItem x:Name="vanillaFilledMenuItem" Header="Vanilla" IsCheckable="True"/>
+					</MenuItem>
+				</MenuItem>
+
+
+				<MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click" InputGestureText="Ctrl+S" Command="CustomCommands:StopCommand.Launch"/>
+
+				<MenuItem Header="Inventory" Command="ApplicationCommands.Print"></MenuItem>
+
+			</MenuItem>
         </Menu>
     </Grid>
 </Window>
